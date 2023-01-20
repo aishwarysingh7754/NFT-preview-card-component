@@ -1,0 +1,140 @@
+:root{
+    --text-color: hsl(215, 51%, 70%);
+    --price-color: hsl(178, 100%, 50%);
+    --bg-color: hsl(217, 54%, 11%);
+    --card-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.content{
+    background-color: var(--card-color);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 320px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5em;
+}
+.nft-preview{
+    position: relative;
+}
+.view-icon{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 7rem;
+    opacity: 0;
+    background-color: hsla(178, 100%, 50%, 40%);
+    transition: opacity 0.4s ease-in-out;
+}
+.title a{
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.description{
+    color: var(--text-color);
+}
+.flex-class{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line-color);
+}
+.ethereum{
+    width: 100%;
+    height: 100%;
+    max-width: 12px;
+}
+.price{
+    color: var(--price-color);
+    font-size: .8rem;
+    font-weight: 600;
+    margin-left: .3rem;
+}
+.clock-icon{
+    width: 100%;
+    height: 100%;
+    max-width: 20px;
+    margin-left: 6rem;
+}
+.time-left{
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: .9rem;
+    margin-left: .3rem;
+}
+img{
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+.nft-author{
+    display: flex;
+
+    align-items: center;
+    padding-bottom: .8rem;
+}
+.creation-by{
+    color: var(--text-color);
+    margin-left: .8rem;
+    font-size: .95rem;
+}
+.creation-by a{
+    text-decoration: none;
+    color: white;
+}
+.avatar-icon{
+    width: 100%;
+    height: 100%;
+    max-width: 30px;
+}
+.title a:hover {
+    color: var(--price-color);
+}
+
+.creation-by a:hover {
+    color: var(--price-color);
+}
+
+.nft-preview:hover .view-icon {
+    opacity: 100;
+    background-color: hsla(178, 100%, 50%, 40%);
+}
+@media (min-width: 385px) {
+    .nftcard__content {
+            font-size: 16px;
+            transition: ease all 0.1s;
+        }
+    .title{
+        font-size: 21px;
+        letter-spacing: 0.75px;
+        transition: ease all 0.1s;
+    }
+    .description p{
+        font-size: 18px;
+        transition: ease all 0.1s;
+    }
+    .nft-author{
+        margin-top: 10px;
+        padding-bottom: 20px;
+        transition: ease all 0.1s;
+    }
+}
